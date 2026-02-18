@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Vetrivel Sankar - Sensor Development Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #2E75B6 0%, #1a4d7a 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        header .tagline {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        header .credentials {
+            font-size: 1.1em;
+            opacity: 0.85;
+        }
+        nav {
+            background: #1a4d7a;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        nav ul li a:hover {
+            opacity: 0.7;
+        }
+        section {
+            padding: 60px 0;
+        }
+        section h2 {
+            font-size: 2em;
+            color: #2E75B6;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #2E75B6;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .stat-box {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .stat-box .number {
+            font-size: 2.5em;
+            color: #2E75B6;
+            font-weight: bold;
+        }
+        .stat-box .label {
+            color: #666;
+            margin-top: 10px;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        .project-card h3 {
+            color: #2E75B6;
+            margin-bottom: 15px;
+        }
+        .project-card .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        .tech-tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+        }
+        .patents-list {
+            list-style: none;
+        }
+        .patents-list li {
+            padding: 20px;
+            margin: 15px 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .patent-status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .patent-granted {
+            background: #d4edda;
+            color: #155724;
+        }
+        .patent-filed {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .publications {
+            list-style: none;
+        }
+        .publications li {
+            padding: 20px;
+            margin: 15px 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .publication-journal {
+            color: #2E75B6;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .skill-category {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .skill-category h3 {
+            color: #2E75B6;
+            margin-bottom: 15px;
+        }
+        .skill-category ul {
+            list-style: none;
+        }
+        .skill-category ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .skill-category ul li:last-child {
+            border-bottom: none;
+        }
+        .contact {
+            background: #2E75B6;
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+        .contact h2 {
+            color: white;
+        }
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 12px 30px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .contact-links a:hover {
+            background: white;
+            color: #2E75B6;
+        }
+        footer {
+            background: #1a4d7a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            nav ul li {
+                margin: 10px;
+            }
+            .stats, .projects, .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Dr. Vetrivel Sankar</h1>
+            <div class="tagline">Bioprocess Sensor Innovation Leader</div>
+            <div class="credentials">PhD (IIT Madras) | Saint-Gobain Research India | 6 Patents | 5+ Publications</div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#patents">Patents</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="highlight-box">
+                <p>Sensor development engineer with PhD from IIT Madras (Best Thesis Award) and 2.5 years of industrial R&D experience at Saint-Gobain Research India (2x Most Valuable Professional). Specialized in MEMS sensors, flexible electronics, and bioprocess pressure sensors with proven track record in new product development and innovation.</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="number">6</div>
+                    <div class="label">Patents Filed</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">2</div>
+                    <div class="label">Patents Granted</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">5+</div>
+                    <div class="label">Publications</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">2x</div>
+                    <div class="label">MVP Awards</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" style="background: #f8f9fa;">
+        <div class="container">
+            <h2>Key Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Single-Use Pressure Sensors for Bioprocess</h3>
+                    <p>Developed pressure sensors specifically designed for single-use systems in pharmaceutical bioprocess applications, addressing sterility and cost-effectiveness requirements.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">MEMS</span>
+                        <span class="tech-tag">Bioprocess</span>
+                        <span class="tech-tag">cGMP</span>
+                        <span class="tech-tag">Life Sciences</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>10M Euro E-Vehicle Thermal Valve System</h3>
+                    <p>Led cross-functional team developing electronic thermal valve actuating system for electric vehicles, from concept to deployment, managing technical and business stakeholders.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Embedded Systems</span>
+                        <span class="tech-tag">Automotive</span>
+                        <span class="tech-tag">Project Management</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Flexible Strain Sensor (Patented)</h3>
+                    <p>Developed polymer nanocomposite-based flexible strain sensor adhesive tape using CNT/graphene functionalization, achieving high sensitivity and durability for wearable and structural health monitoring.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Flexible Electronics</span>
+                        <span class="tech-tag">Nanomaterials</span>
+                        <span class="tech-tag">Wearables</span>
+                        <span class="tech-tag">CNT/Graphene</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>NOx Gas Sensor from Biomass</h3>
+                    <p>Developed environmentally sustainable NO2 gas sensor using biomass carbon derived from invasive plant species (Prosopis Juliflora), demonstrating climate-positive innovation.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Gas Sensors</span>
+                        <span class="tech-tag">Sustainability</span>
+                        <span class="tech-tag">Metal Oxides</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>MEMS Accelerometer Design</h3>
+                    <p>Designed piezoresistive MEMS acceleration sensor with zero cross-axis sensitivity and high prime-axis response without sacrificing operational bandwidth, using FEM optimization.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">MEMS</span>
+                        <span class="tech-tag">FEM (COMSOL)</span>
+                        <span class="tech-tag">Sensor Design</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Embedded Electronics for Sensors</h3>
+                    <p>Developed portable electronic interface systems for flexible strain and gas sensors, including LabVIEW-based test beds, IoT-enabled systems, and wireless control interfaces.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Embedded Systems</span>
+                        <span class="tech-tag">LabVIEW</span>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="patents">
+        <div class="container">
+            <h2>Patents</h2>
+            <ul class="patents-list">
+                <li>
+                    <strong>Pressure Sensitive Adhesive Tape Based Flexible Strain Sensor</strong>
+                    <span class="patent-status patent-granted">GRANTED</span>
+                    <br>IN 202241015602, Grant No. 432188 (May 2023)
+                    <br><em>Inventors: Vetrivel Sankar, Krishnan Balasubramaniam, Ramaprabhu S</em>
+                </li>
+                <li>
+                    <strong>Strain Sensor for Wearable Electronics</strong>
+                    <span class="patent-status patent-granted">GRANTED</span>
+                    <br>IN 201941015175 (Filed April 2019)
+                    <br><em>Inventors: Vetrivel Sankar, Krishnan Balasubramaniam, Ramaprabhu S</em>
+                </li>
+                <li>
+                    <strong>Waveguide Based Windshield Monitoring and Heating</strong>
+                    <span class="patent-status patent-filed">FILED</span>
+                    <br>IN 202441035627 (October 2024)
+                    <br><em>Inventors: Vetrivel Sankar, Robin J, Arunvel T</em>
+                </li>
+                <li>
+                    <strong>Conductive Ceramic Coating and Method of Preparing the Same</strong>
+                    <span class="patent-status patent-filed">FILED</span>
+                    <br>IN 202541033837 (April 2025)
+                    <br><em>Inventors: Vetrivel Sankar, Robin J, Arunvel T</em>
+                </li>
+                <li>
+                    <strong>Multi-Sensor Fusion System for Real-time Float Glass Furnace Wall Health Monitoring</strong>
+                    <span class="patent-status patent-filed">FILED</span>
+                    <br>N2025234
+                    <br><em>Inventors: Vetrivel Sankar, Keerthi Vasan, Robin J</em>
+                </li>
+                <li>
+                    <strong>In-situ Polymer Based Sensing Layers for Life Science Applications</strong>
+                    <span class="patent-status patent-filed">FILED</span>
+                    <br>ID81458802-25-OF-0P208
+                    <br><em>Inventors: Vetrivel Sankar, Robin J, Ashok Raja, Arunvel T</em>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="publications" style="background: #f8f9fa;">
+        <div class="container">
+            <h2>Selected Publications</h2>
+            <ul class="publications">
+                <li>
+                    <strong>Design Framework for Polymer Nanocomposite Flexible Strain Sensor Adhesive Tape</strong>
+                    <br><span class="publication-journal">IEEE Journal of Flexible Electronics (J-FLEX)</span>, 2023
+                    <br>DOI: 10.1109/JFLEX.2023.3279798
+                </li>
+                <li>
+                    <strong>Insights into the effect of polymer functionalization of multiwalled carbon nanotubes in the design of flexible strain sensor</strong>
+                    <br><span class="publication-journal">Sensors and Actuators A: Physical</span>, Vol. 322, 2021
+                    <br>DOI: 10.1016/j.sna.2021.112605
+                </li>
+                <li>
+                    <strong>Waterproof Flexible Polymer Functionalized Graphene Based Piezoresistive Strain Sensor for Structural Health Monitoring and Wearable Devices</strong>
+                    <br><span class="publication-journal">ACS Omega</span>, Vol. 5, Issue 22, 2020, pp. 12682–12691
+                    <br>DOI: 10.1021/acsomega.9b04205
+                </li>
+                <li>
+                    <strong>Prosopis Juliflora: invasive alien plant species derived biomass carbon and its application in hazardous NO2 gas sensing</strong>
+                    <br><span class="publication-journal">Journal of Material Science: Materials in Electronics</span>, Vol. 34, Issue 9, 2023
+                    <br>DOI: 10.1007/s10854-023-10183-6
+                </li>
+                <li>
+                    <strong>Design and optimization of a doubly clamped piezoresistive acceleration sensor with an integrated silicon nanowire piezoresistor</strong>
+                    <br><span class="publication-journal">Microsystem Technologies</span>, Vol. 23, No. 8, 2017, pp. 3525-3536
+                    <br>DOI: 10.1007/s00542-016-3219-2
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Sensor Technologies</h3>
+                    <ul>
+                        <li>MEMS Sensor Design</li>
+                        <li>Flexible Electronics</li>
+                        <li>Printed Electronics</li>
+                        <li>Pressure Sensors</li>
+                        <li>Gas Sensors (NOx)</li>
+                        <li>Strain Sensors</li>
+                        <li>Bioprocess Sensors</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Nanomaterials</h3>
+                    <ul>
+                        <li>Carbon Nanotubes (CNT)</li>
+                        <li>Graphene</li>
+                        <li>MXene</li>
+                        <li>Metal Oxides</li>
+                        <li>2D Materials</li>
+                        <li>Polymer Nanocomposites</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Simulation & Modeling</h3>
+                    <ul>
+                        <li>COMSOL Multiphysics</li>
+                        <li>FEM Modeling</li>
+                        <li>IntelliSuite</li>
+                        <li>LT-Spice</li>
+                        <li>L-Edit</li>
+                        <li>Blender</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Characterization</h3>
+                    <ul>
+                        <li>XRD, Raman Spectroscopy</li>
+                        <li>SEM, TEM</li>
+                        <li>BET, TGA</li>
+                        <li>UV-VIS, FTIR</li>
+                        <li>Zeta Potential</li>
+                        <li>4-Probe Conductivity</li>
+                        <li>Surface Profilometry</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>MATLAB</li>
+                        <li>LabVIEW</li>
+                        <li>Octave</li>
+                        <li>Machine Learning</li>
+                        <li>AI Tools</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Embedded Systems</h3>
+                    <ul>
+                        <li>Embedded Electronics Design</li>
+                        <li>Test Bed Development</li>
+                        <li>IoT Systems</li>
+                        <li>Wireless Control</li>
+                        <li>Sensor Interface Circuits</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <p>Open to collaborations with leading sensor and biotech companies</p>
+            <div class="contact-links">
+                <a href="mailto:mrvetrivels@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                <a href="https://scholar.google.com/yourprofile" target="_blank">Google Scholar</a>
+                <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dr. Vetrivel Sankar. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
