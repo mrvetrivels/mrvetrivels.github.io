@@ -8,7 +8,6 @@
     <meta name="keywords" content="sensor development engineer, MEMS, bioprocess sensor, flexible electronics, IIT Madras, pressure sensor, gas sensor, nanomaterials">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.min.js"></script>
     <style>
         :root {
             --ink:       #1c2b3a;
@@ -52,82 +51,6 @@
             color: #fff; letter-spacing: 0.01em;
         }
         .nav-brand span { color: var(--teal-mid); }
-        /* ── DEMO VIDEOS ── */
-        .videos-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-        .videos-grid .video-card:nth-child(4) { grid-column: 1; }
-        .videos-grid .video-card:nth-child(5) { grid-column: 2; }
-        .video-card {
-            background: var(--white); border:1px solid var(--border);
-            border-radius:10px; overflow:hidden;
-            transition: box-shadow 0.25s, transform 0.25s;
-            display:flex; flex-direction:column;
-        }
-        .video-card:hover { box-shadow: 0 10px 36px rgba(28,43,58,0.13); transform: translateY(-4px); }
-        .video-embed {
-            position: relative; width:100%; padding-top:56.25%;
-            background: var(--ink); overflow:hidden;
-        }
-        .video-embed iframe {
-            position:absolute; top:0; left:0;
-            width:100%; height:100%; border:0;
-        }
-        .video-embed .video-placeholder {
-            position:absolute; top:0; left:0; width:100%; height:100%;
-            display:flex; flex-direction:column;
-            align-items:center; justify-content:center;
-            background: linear-gradient(135deg, #1c2b3a 0%, #2a3f52 100%);
-            color: rgba(255,255,255,0.4); gap:10px;
-        }
-        .video-placeholder i { width:40px; height:40px; color:var(--teal-mid); opacity:0.6; }
-        .video-placeholder span { font-size:0.78em; letter-spacing:0.05em; }
-        .video-body { padding:20px 22px 0; flex:1; display:flex; flex-direction:column; }
-        .video-journal {
-            display:inline-flex; align-items:center; gap:6px;
-            background:var(--teal-pale); color:var(--teal);
-            padding:4px 11px; border-radius:3px;
-            font-size:0.72em; font-weight:700;
-            letter-spacing:0.04em; margin-bottom:12px;
-            width:fit-content;
-        }
-        .video-journal i { width:11px; height:11px; }
-        .video-body h3 {
-            font-family:'Fraunces',serif;
-            font-size:0.95em; font-weight:700;
-            color:var(--ink); line-height:1.4; margin-bottom:10px;
-        }
-        .video-body p { color:var(--slate); font-size:0.82em; line-height:1.65; flex:1; margin-bottom:12px; }
-        .video-doi {
-            display:inline-flex; align-items:center; gap:6px;
-            margin-top:auto; padding:7px 0 14px;
-            border-top:1px solid var(--border);
-        }
-        .video-doi i { width:12px; height:12px; color:var(--teal); flex-shrink:0; }
-        .video-doi a {
-            font-size:0.75em; color:var(--teal); text-decoration:none;
-            font-weight:600; word-break:break-all;
-        }
-        .video-doi a:hover { text-decoration:underline; }
-        .doi-label { font-size:0.75em; font-weight:700; color:var(--ink-light); white-space:nowrap; }
-        .video-footer {
-            padding:12px 22px;
-            border-top:1px solid var(--border);
-            display:flex; align-items:center; justify-content:space-between;
-        }
-        .video-tags { display:flex; flex-wrap:wrap; gap:5px; }
-        .video-tag {
-            background:var(--sand); color:var(--ink-light);
-            padding:3px 9px; border-radius:3px;
-            font-size:0.72em; border:1px solid var(--border);
-        }
-        .video-yt-link {
-            display:inline-flex; align-items:center; gap:5px;
-            color:var(--slate); font-size:0.75em; text-decoration:none;
-            font-weight:500; white-space:nowrap;
-            transition: color 0.2s;
-        }
-        .video-yt-link:hover { color:#c00; }
-        .video-yt-link i { width:13px; height:13px; }
-
         nav ul { list-style:none; display:flex; gap:28px; }
         nav ul a {
             color: rgba(255,255,255,0.6);
@@ -435,7 +358,7 @@
         .ach-sub { color:rgba(255,255,255,0.45); font-size:0.78em; line-height:1.5; }
 
         /* ── PRESENTATIONS ── */
-        .pres-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+        .pres-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:40px; }
         .pres-group h3 {
             font-family:'Fraunces',serif; font-size:1.05em;
             color:var(--ink); margin-bottom:18px;
@@ -449,7 +372,7 @@
             border-left: 3px solid var(--teal);
         }
         .pres-item strong { color:var(--ink); font-size:0.85em; display:block; margin-bottom:2px; }
-        .pres-item span { color:var(--slate); font-size:0.78em; }
+        .pres-item span { color:var(--slate); font-size:0.78em; display:block; line-height:1.5; }
 
         /* ── CONTACT ── */
         .contact-inner { max-width:680px; margin:0 auto; text-align:center; }
@@ -491,7 +414,7 @@
             .section { padding:70px 40px; }
             .projects-grid, .skills-grid, .ach-grid { grid-template-columns:repeat(2,1fr); }
             .about-grid { grid-template-columns:1fr; }
-            .pres-grid { grid-template-columns:1fr; }
+            .pres-grid { grid-template-columns:1fr 1fr; }
         }
         @media (max-width:640px) {
             nav { padding:0 20px; }
@@ -502,6 +425,7 @@
             .projects-grid, .skills-grid, .ach-grid { grid-template-columns:1fr; }
             .patent-row { grid-template-columns:1fr; }
             .pub-row { grid-template-columns:1fr; }
+            .pres-grid { grid-template-columns:1fr; }
         }
     </style>
 </head>
@@ -513,7 +437,6 @@
     <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#demos">Demos</a></li>
         <li><a href="#patents">Patents</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -542,7 +465,7 @@
             <span class="hero-tag">10+ Publications</span>
         </div>
         <div class="hero-ctas">
-            <a href="/cdn-cgi/l/email-protection#9ef3ece8fbeaecf7e8fbf2eddef9f3fff7f2b0fdf1f3" class="btn-teal">
+            <a href="mailto:mrvetrivels@gmail.com" class="btn-teal">
                 <i data-lucide="mail"></i> Get In Touch
             </a>
             <a href="https://www.linkedin.com/in/vetrivelsankar" target="_blank" class="btn-outline">
@@ -611,7 +534,7 @@
             <div class="about-card">
                 <i data-lucide="mail"></i>
                 <div class="about-card-body">
-                    <div class="ac-title"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bfd2cdc9dacbcdd6c9dad3ccffd8d2ded6d391dcd0d2">[email&#160;protected]</a></div>
+                    <div class="ac-title">mrvetrivels@gmail.com</div>
                     <div class="ac-sub">+91 99942-62578</div>
                 </div>
             </div>
@@ -660,168 +583,6 @@
             <p>Designed and deployed portable embedded electronics interface systems including LabVIEW-based test stations, IoT-enabled wireless acquisition, real-time signal processing, and sensor-to-system integration for industrial and wearable applications.</p>
             <div class="proj-tags"><span class="proj-tag">LabVIEW</span><span class="proj-tag">IoT</span><span class="proj-tag">Python</span><span class="proj-tag">Signal Processing</span></div>
         </div>
-    </div>
-</section>
-
-<!-- DEMO VIDEOS -->
-<section class="section section-alt" id="demos">
-    <div class="sec-label"><i data-lucide="play-circle"></i> In Action</div>
-    <div class="sec-title">Research <span>Demo Videos</span></div>
-    <p style="color:var(--slate);font-size:0.9em;margin-top:-28px;margin-bottom:40px;max-width:680px;">
-        Supplementary demonstration videos published alongside peer-reviewed journal articles. Originally released as part of the respective publications.
-    </p>
-    <div class="videos-grid">
-
-        <!-- VIDEO 1 -->
-        <div class="video-card">
-            <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/bBPeaEEKlHg"
-                    title="Gas Sensor: NOx Gas Leak Detector - Alarm | Vetrivel Sankar et.al | J Mater Sci: Mater Electron"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="video-body">
-                <div class="video-journal"><i data-lucide="book-open"></i> J. Mater. Sci.: Mater. Electron.</div>
-                <h3>Gas Sensor: NOx Gas Leak Detector — Alarm</h3>
-                <p>Demonstrates a biomass-derived carbon-based NO₂ gas sensor triggering a real-time alarm upon hazardous gas leak detection — showcasing sensitivity and practical safety application.</p>
-                <div class="video-doi">
-                    <i data-lucide="link"></i>
-                    <span class="doi-label">DOI:</span>
-                    <a href="https://doi.org/10.1007/s10854-023-10183-6" target="_blank">10.1007/s10854-023-10183-6</a>
-                </div>
-            </div>
-            <div class="video-footer">
-                <div class="video-tags">
-                    <span class="video-tag">NOx Gas Sensor</span>
-                    <span class="video-tag">Biomass Carbon</span>
-                    <span class="video-tag">Alarm</span>
-                </div>
-                <a href="https://youtu.be/bBPeaEEKlHg" target="_blank" class="video-yt-link">
-                    <i data-lucide="external-link"></i> YouTube
-                </a>
-            </div>
-        </div>
-
-        <!-- VIDEO 2 -->
-        <div class="video-card">
-            <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/LAbRUp1KBNw"
-                    title="IOT Based Flexible Strain Sensor: Tactile Sensing Application | Vetrivel Sankar et.al | IEEE J FLEX"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="video-body">
-                <div class="video-journal"><i data-lucide="book-open"></i> IEEE J-FLEX, 2023</div>
-                <h3>IoT Based Flexible Strain Sensor: Tactile Sensing Application</h3>
-                <p>Shows the polymer nanocomposite flexible strain sensor integrated into an IoT system for real-time tactile sensing — demonstrating wireless data acquisition and response to finger-press inputs.</p>
-                <div class="video-doi">
-                    <i data-lucide="link"></i>
-                    <span class="doi-label">DOI:</span>
-                    <a href="https://doi.org/10.1109/JFLEX.2023.3279798" target="_blank">10.1109/JFLEX.2023.3279798</a>
-                </div>
-            </div>
-            <div class="video-footer">
-                <div class="video-tags">
-                    <span class="video-tag">IoT</span>
-                    <span class="video-tag">Tactile Sensing</span>
-                    <span class="video-tag">Flexible Sensor</span>
-                </div>
-                <a href="https://youtu.be/LAbRUp1KBNw" target="_blank" class="video-yt-link">
-                    <i data-lucide="external-link"></i> YouTube
-                </a>
-            </div>
-        </div>
-
-        <!-- VIDEO 3 -->
-        <div class="video-card">
-            <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/WR3QmSo24JU"
-                    title="Flexible Strain Sensor: Wireless Robotic Arm Control | Vetrivel Sankar et.al | ACS Omega"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="video-body">
-                <div class="video-journal"><i data-lucide="book-open"></i> ACS Omega, 2020</div>
-                <h3>Flexible Strain Sensor: Wireless Robotic Arm Control</h3>
-                <p>Demonstrates real-time control of a robotic arm using finger-mounted graphene flexible strain sensors over Bluetooth — highlighting the sensor's precision and wearable integration capability.</p>
-                <div class="video-doi">
-                    <i data-lucide="link"></i>
-                    <span class="doi-label">DOI:</span>
-                    <a href="https://doi.org/10.1021/acsomega.9b04205" target="_blank">10.1021/acsomega.9b04205</a>
-                </div>
-            </div>
-            <div class="video-footer">
-                <div class="video-tags">
-                    <span class="video-tag">Robotic Arm</span>
-                    <span class="video-tag">Bluetooth</span>
-                    <span class="video-tag">Wireless Control</span>
-                </div>
-                <a href="https://youtu.be/WR3QmSo24JU" target="_blank" class="video-yt-link">
-                    <i data-lucide="external-link"></i> YouTube
-                </a>
-            </div>
-        </div>
-
-        <!-- VIDEO 4 -->
-        <div class="video-card">
-            <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/aQNlIsptpY0"
-                    title="Flexible Strain Sensor: Human Activity Monitoring | Vetrivel Sankar et.al | Sensors & Actuators A"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="video-body">
-                <div class="video-journal"><i data-lucide="book-open"></i> Sensors &amp; Actuators A, 2021</div>
-                <h3>Flexible Strain Sensor: Human Activity Monitoring</h3>
-                <p>Shows the CNT-based polymer nanocomposite flexible strain sensor detecting joint movements and gestures in real time — validating its use for wearable human activity monitoring.</p>
-                <div class="video-doi">
-                    <i data-lucide="link"></i>
-                    <span class="doi-label">DOI:</span>
-                    <a href="https://doi.org/10.1016/j.sna.2021.112605" target="_blank">10.1016/j.sna.2021.112605</a>
-                </div>
-            </div>
-            <div class="video-footer">
-                <div class="video-tags">
-                    <span class="video-tag">Human Activity</span>
-                    <span class="video-tag">Nanocomposite</span>
-                    <span class="video-tag">Flexible Sensor</span>
-                </div>
-                <a href="https://youtu.be/aQNlIsptpY0" target="_blank" class="video-yt-link">
-                    <i data-lucide="external-link"></i> YouTube
-                </a>
-            </div>
-        </div>
-
-        <!-- VIDEO 5 -->
-        <div class="video-card">
-            <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/JYSTolgxFbA"
-                    title="Waterproof Flexible Strain Sensor | Vetrivel Sankar et.al | American Chemical Society"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="video-body">
-                <div class="video-journal"><i data-lucide="book-open"></i> ACS Omega, 2020</div>
-                <h3>Waterproof Flexible Strain Sensor: Tactile Sensing Application</h3>
-                <p>Demonstrates the waterproof graphene-based strain sensor performing reliably under wet conditions for tactile sensing — proving durability and consistent electrical response in real-world environments.</p>
-                <div class="video-doi">
-                    <i data-lucide="link"></i>
-                    <span class="doi-label">DOI:</span>
-                    <a href="https://doi.org/10.1021/acsomega.9b04205" target="_blank">10.1021/acsomega.9b04205</a>
-                </div>
-            </div>
-            <div class="video-footer">
-                <div class="video-tags">
-                    <span class="video-tag">Waterproof</span>
-                    <span class="video-tag">Tactile Sensing</span>
-                    <span class="video-tag">Graphene</span>
-                </div>
-                <a href="https://youtu.be/JYSTolgxFbA" target="_blank" class="video-yt-link">
-                    <i data-lucide="external-link"></i> YouTube
-                </a>
-            </div>
-        </div>
-
     </div>
 </section>
 
@@ -1089,6 +850,16 @@
                 <li class="pres-item"><strong>Technoquest 2009 — Best Presentation</strong><span>Tamil Nadu, India</span></li>
             </ul>
         </div>
+        <div class="pres-group">
+            <h3><i data-lucide="message-square"></i> Invited Talks</h3>
+            <ul class="pres-list">
+                <li class="pres-item">
+                    <strong>Industrial Guest Lecture, Mar 2026</strong>
+                    <span>"Sensors Beyond Syllabus: Lessons from the Industrial R&amp;D"</span>
+                    <span>VIT Chennai Campus, Chennai, India</span>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
 
@@ -1105,10 +876,26 @@
             Sensor Development · R&D Engineer · Materials Innovation · Europe · USA · Asia-Pacific
         </p>
         <div class="contact-links">
-            <a href="/cdn-cgi/l/email-protection#bed3ccc8dbcaccd7c8dbd2cdfed9d3dfd7d290ddd1d3" class="contact-link"><i data-lucide="mail"></i> Email</a>
+            <a href="mailto:mrvetrivels@gmail.com" class="contact-link"><i data-lucide="mail"></i> Email</a>
             <a href="https://www.linkedin.com/in/vetrivelsankar" target="_blank" class="contact-link"><i data-lucide="linkedin"></i> LinkedIn</a>
             <a href="https://scholar.google.com/citations?user=6EhzB_4AAAAJ&hl=en" target="_blank" class="contact-link"><i data-lucide="graduation-cap"></i> Google Scholar</a>
             <a href="https://www.researchgate.net/profile/Vetrivel-Sankar" target="_blank" class="contact-link"><i data-lucide="microscope"></i> ResearchGate</a>
         </div>
         <div class="contact-direct">
-            <a href="/cdn-cgi/l/email-protection#c1acb3b7a4b5b3a8b7a4adb281a6a
+            <a href="mailto:mrvetrivels@gmail.com">mrvetrivels@gmail.com</a> · +91 99942-62578
+        </div>
+    </div>
+</section>
+
+<footer>© 2025 Dr. Vetrivel Sankar · Sensor Development Engineer · Chennai, India</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    });
+</script>
+</body>
+</html>
